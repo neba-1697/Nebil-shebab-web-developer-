@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson - Creative Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0f172a;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .portfolio-header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .portfolio-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .portfolio-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .portfolio-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .portfolio-menu a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .portfolio-menu a:hover {
+            color: #60a5fa;
+        }
+
+        /* Hero Section */
+        .portfolio-hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+
+        .portfolio-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .portfolio-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .portfolio-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Projects */
+        .portfolio-projects {
+            padding: 80px 0;
+            background: #1e293b;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: #334155;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: #60a5fa;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .portfolio-skills {
+            padding: 80px 0;
+            background: #0f172a;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ef4444;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../projects.html" class="back-btn">← Back to Projects</a>
+
+    <header class="portfolio-header">
+        <div class="container">
+            <nav class="portfolio-nav">
+                <div class="portfolio-logo">Alex Johnson</div>
+                <ul class="portfolio-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio-hero" id="home">
+            <div class="container">
+                <h1>Creative Developer & Designer</h1>
+                <p>I craft digital experiences that inspire and engage users</p>
+                <a href="#projects" class="portfolio-btn">View My Work</a>
+            </div>
+        </section>
+
+        <section class="portfolio-projects" id="projects">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Featured Projects</h2>
+                <p style="text-align: center; font-size: 1.2rem; opacity: 0.8;">Some of my recent work</p>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p>A modern e-commerce solution with payment integration, admin dashboard, and responsive design.</p>
+                        <div style="margin-top: 1rem;">
+                            <span style="background: #60a5fa; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">React</span>
+                            <span style="background: #34d399; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3 class="project-title">Mobile App UI</h3>
+                        <p>Beautiful and intuitive mobile app interface design with smooth animations and user-friendly navigation.</p>
+                        <div style="margin-top: 1rem;">
+                            <span style="background: #f59e0b; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Figma</span>
+                            <span style="background: #8b5cf6; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">React Native</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3 class="project-title">Brand Identity</h3>
+                        <p>Complete brand identity design including logo, color palette, typography, and brand guidelines.</p>
+                        <div style="margin-top: 1rem;">
+                            <span style="background: #ef4444; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem;">Illustrator</span>
+                            <span style="background: #06b6d4; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-skills" id="skills">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">Figma</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Designer - Portfolio Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #a78bfa;
+            --accent-color: #fbbf24;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --background-light: #faf7ff;
+            --background-white: #ffffff;
+            --background-dark: #1f2937;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--background-light), white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-avatar {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;
+            opacity: 0.3;
+            border-radius: 2rem;
+        }
+
+        .hero-avatar i {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 400px;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .skill-item i {
+            color: var(--primary-color);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 5rem 0;
+            background: var(--background-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: var(--background-light);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .portfolio-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .portfolio-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            background: var(--background-light);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-color);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--background-dark);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            transition: all 0.3s;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-method i {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            background: var(--secondary-color);
+        }
+
+        .back-to-portfolio {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1001;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-avatar {
+                width: 250px;
+                height: 250px;
+                font-size: 5rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../projects.html" class="back-to-portfolio">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">Sarah Designer</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Creative <span class="highlight">Designer</span> & Digital Artist</h1>
+                        <p>I create beautiful, functional designs that tell your story and connect with your audience. Specializing in brand identity, web design, and digital experiences.</p>
+                        <div class="hero-buttons">
+                            <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-avatar">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="about-text">
+                        <h2>About Sarah</h2>
+                        <p>With over 8 years of experience in design, I've had the privilege of working with startups, established businesses, and creative agencies to bring their visions to life.</p>
+                        <p>My approach combines strategic thinking with creative execution, ensuring that every design not only looks beautiful but also serves a purpose and drives results.</p>
+                        <p>I believe that great design is about more than aesthetics – it's about creating meaningful connections between brands and their audiences.</p>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="fas fa-check"></i>
+                                <span>Brand Identity Design</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-check"></i>
+                                <span>Web Design & UI/UX</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-check"></i>
+                                <span>Print & Digital Design</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-check"></i>
+                                <span>Art Direction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Work</h2>
+                    <p>A selection of projects that showcase my design approach and capabilities</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>EcoTech Mobile App</h3>
+                            <p>Complete mobile app design for a sustainability-focused technology startup, including user research, wireframing, and high-fidelity prototypes.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">UI/UX Design</span>
+                                <span class="tag">Mobile</span>
+                                <span class="tag">Prototyping</span>
+                            </div>
+                            <a href="#" class="portfolio-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Artisan Coffee Brand</h3>
+                            <p>Complete brand identity and packaging design for a premium coffee roastery, including logo, brand guidelines, and packaging system.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Brand Identity</span>
+                                <span class="tag">Packaging</span>
+                                <span class="tag">Print Design</span>
+                            </div>
+                            <a href="#" class="portfolio-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>TechFlow Website</h3>
+                            <p>Modern website design and development for a SaaS platform, focusing on user experience and conversion optimization.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Development</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <a href="#" class="portfolio-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Creative Agency Rebrand</h3>
+                            <p>Complete rebrand for a creative agency, including new visual identity, website design, and marketing materials.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Rebranding</span>
+                                <span class="tag">Visual Identity</span>
+                                <span class="tag">Marketing</span>
+                            </div>
+                            <a href="#" class="portfolio-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What I Do</h2>
+                    <p>Comprehensive design services to help your brand shine</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Brand Identity</h3>
+                        <p>Create memorable brand identities that resonate with your audience and stand out in the marketplace.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Design beautiful, responsive websites that provide excellent user experiences across all devices.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Print Design</h3>
+                        <p>Create stunning print materials including brochures, business cards, posters, and packaging design.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Design intuitive user interfaces and optimize user experiences for web and mobile applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Let's Create Something Amazing Together</h2>
+                        <p>Ready to bring your vision to life? I'd love to hear about your project and discuss how we can work together to create something extraordinary.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@sarahdesigner.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>New York, NY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project">Project Type</label>
+                                <input type="text" id="project" placeholder="Brand Design, Web Design, etc." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Sarah Designer. All rights reserved. | Designed by Nebil Shebab</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact form
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
