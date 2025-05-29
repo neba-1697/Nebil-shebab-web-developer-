@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	fileMode = false
+	bare = false
+	logallrefupdates = true
+[user]
+	name = Lilykhan
+	email = lilykhan9692@gmail.com
+[remote "origin"]
+	url = https://github.com/Lilykhan786/Portfolio-Template
+	fetch = +refs/heads/*:refs/remotes/origin/*
